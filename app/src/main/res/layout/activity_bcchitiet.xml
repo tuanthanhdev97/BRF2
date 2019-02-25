@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.baoviet.bvlife.bfr.activity.BCKinhdoanhActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:background="#00B0F0"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+            <ImageView
+                android:background="@drawable/back"
+                android:id="@+id/btnBack"
+                android:layout_margin="5dp"
+                android:layout_centerVertical="true"
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
+            <TextView
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textColor="#FFF"
+                android:textSize="16dp"
+                android:text="Công ty"
+                />
+            <TextView
+                android:textSize="16dp"
+                android:layout_marginRight="20dp"
+                android:textColor="#FFF"
+                android:layout_centerVertical="true"
+                android:id="@+id/txtCongty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:background="#A8D088"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textColor="#FFF"
+                android:layout_marginLeft="10dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:layout_alignParentLeft="true"
+                android:text="DT Ngày"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/txtDTngay"
+                android:layout_marginRight="20dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:textColor="#FFF"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_marginLeft="10dp"
+                    android:layout_gravity="center"
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:background="@drawable/circlethang"
+                    />
+                <TextView
+                    android:textColor="#B65B0E"
+                    android:textSize="16dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Doanh thu tháng"
+                    />
+            </LinearLayout>
+            <View
+                android:layout_marginRight="10dp"
+                android:background="#B65B0E"
+                android:layout_marginLeft="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"></View>
+        </LinearLayout>
+        <com.github.mikephil.charting.charts.HorizontalBarChart
+            android:layout_width="match_parent"
+            android:id="@+id/chartThang"
+            android:layout_marginRight="10dp"
+            android:layout_height="150dp">
+        </com.github.mikephil.charting.charts.HorizontalBarChart>
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+
+                android:layout_marginLeft="15dp"
+                android:layout_alignParentLeft="true"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="LK tháng"
+                    android:textColor="#B65B0E" />
+                <TextView
+                    android:textColor="#B65B0E"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="KH tháng"
+                    />
+                <TextView
+                    android:textColor="#B65B0E"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CK năm trước"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginRight="30dp"
+               android:layout_toLeftOf="@+id/linearRight"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/txtLKthang"
+                    android:textColor="#B65B0E"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+                <TextView
+                    android:id="@+id/txtKHthang"
+                    android:textColor="#B65B0E"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+                <TextView
+                    android:id="@+id/txtCKnamtruoc"
+                    android:textColor="#B65B0E"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearRight"
+                android:layout_marginRight="15dp"
+                android:layout_alignParentRight="true"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="85dp"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:textColor="#B65B0E"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="("
+                        />
+                    <ImageView
+
+                        android:layout_gravity="center"
+                        android:id="@+id/imgTLthang"
+                        android:textColor="#B65B0E"
+                        android:layout_width="20dp"
+                        android:layout_height="15dp"
+                        />
+                    <TextView
+                        android:id="@+id/txtTLthang"
+                        android:textColor="#B65B0E"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        />
+                </LinearLayout>
+
+                <TextView
+                    android:textColor="#B65B0E"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+                <LinearLayout
+                    android:layout_width="85dp"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:textColor="#B65B0E"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="("
+                        />
+                    <ImageView
+
+                        android:layout_gravity="center"
+                        android:id="@+id/imgTLLKthang"
+                        android:textColor="#B65B0E"
+                        android:layout_width="20dp"
+                        android:layout_height="15dp"
+                        />
+                    <TextView
+                        android:id="@+id/txtTLLKthang"
+                        android:textColor="#B65B0E"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_marginLeft="10dp"
+                    android:layout_gravity="center"
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:background="@drawable/circlequy"
+                    />
+                <TextView
+                    android:textColor="#508030"
+                    android:textSize="16dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Doanh thu quý"
+                    />
+            </LinearLayout>
+            <View
+                android:layout_marginRight="10dp"
+                android:background="#508030"
+                android:layout_marginLeft="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"></View>
+        </LinearLayout>
+        <com.github.mikephil.charting.charts.HorizontalBarChart
+            android:layout_width="match_parent"
+            android:id="@+id/chartQuy"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_height="115dp">
+        </com.github.mikephil.charting.charts.HorizontalBarChart>
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_marginLeft="15dp"
+                android:layout_alignParentLeft="true"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textColor="#508030"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="LK quý"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="KH quý"
+                    android:textColor="#508030" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_toLeftOf="@+id/linearRight2"
+                android:layout_marginRight="30dp"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/txtLKquy"
+                    android:textColor="#137E0A"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+
+                <TextView
+                    android:id="@+id/txtKHquy"
+                    android:textColor="#137E0A"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/linearRight2"
+                android:layout_marginRight="15dp"
+                android:layout_alignParentRight="true"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="85dp"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:textColor="#508030"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="("
+                        />
+                    <ImageView
+
+                        android:layout_gravity="center"
+                        android:id="@+id/imgTLKHquy"
+                        android:textColor="#B65B0E"
+                        android:layout_width="20dp"
+                        android:layout_height="15dp"
+                        />
+                    <TextView
+                        android:id="@+id/txtTLKHquy"
+                        android:textColor="#508030"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        />
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </RelativeLayout>
+
+
+
+        <LinearLayout
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_marginLeft="10dp"
+                    android:layout_gravity="center"
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:background="@drawable/circlenam"
+                    />
+                <TextView
+                    android:textColor="#F96519"
+                    android:textSize="16dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Doanh thu năm"
+                    />
+            </LinearLayout>
+            <View
+                android:layout_marginRight="10dp"
+                android:background="#F96519"
+                android:layout_marginLeft="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"></View>
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_marginLeft="15dp"
+                android:layout_alignParentLeft="true"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textColor="#F96519"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="LK năm"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="KH năm"
+                    android:textColor="#F96519" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="LK năm trước"
+                    android:textColor="#F96519" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginRight="30dp"
+                android:layout_toLeftOf="@+id/linearRight3"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/txtLKnam"
+                    android:textColor="#F96519"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+
+                <TextView
+                    android:id="@+id/txtKHnam"
+                    android:textColor="#F96519"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+                <TextView
+                    android:id="@+id/txtLKnamtruoc"
+                    android:textColor="#F96519"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/linearRight3"
+                android:layout_marginRight="15dp"
+                android:layout_alignParentRight="true"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="85dp"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:textColor="#F96519"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="("
+                        />
+                    <ImageView
+
+                        android:layout_gravity="center"
+                        android:id="@+id/imgLKnam"
+                        android:textColor="#B65B0E"
+                        android:layout_width="20dp"
+                        android:layout_height="15dp"
+                        />
+                    <TextView
+                        android:id="@+id/txtTLnam"
+                        android:textColor="#F96519"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        />
+                </LinearLayout>
+
+                <TextView
+                    android:textColor="#B65B0E"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+                <LinearLayout
+                    android:layout_width="85dp"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:textColor="#F96519"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="("
+                        />
+                    <ImageView
+                        android:layout_gravity="center"
+                        android:id="@+id/imgTLLKnam"
+                        android:textColor="#B65B0E"
+                        android:layout_width="20dp"
+                        android:layout_height="15dp"
+                        />
+                    <TextView
+                        android:id="@+id/txtTLLKnamtruoc"
+                        android:textColor="#F96519"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        />
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+    <!--<TextView-->
+        <!--android:id="@+id/txtText"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content" />-->
+    <!--<ListView-->
+                <!--android:id="@+id/listviewbaocaokinhdoanh"-->
+                <!--android:childDivider="#af966b"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent">-->
+    <!--</ListView>-->
+</ScrollView>

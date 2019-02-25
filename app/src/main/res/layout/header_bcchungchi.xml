@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0095da"
+    android:weightSum="9">
+
+    <TextView
+        android:id="@+id/txtheaderBCCCCongty"
+        android:text="Công ty"
+        android:padding="10dp"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_width="0dp"
+        android:layout_weight="3"
+        android:layout_height="match_parent"
+        android:textColor="#fdfdfb"
+        />
+
+    <TextView
+        android:id="@+id/txtheaderBCCCmacongty"
+        android:text="MCT"
+        android:padding="10dp"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_width="0dp"
+        android:layout_weight="3"
+        android:layout_height="match_parent"
+        android:textColor="#fdfdfb"/>
+
+    <TextView
+        android:id="@+id/txtheaderBCCCTongthamgia"
+        android:text="Tổng số tham gia"
+        android:padding="10dp"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_width="0dp"
+        android:layout_weight="3"
+        android:layout_height="match_parent"
+        android:textColor="#fdfdfb"/>
+    <!--<TextView
+        android:id="@+id/txtheaderBCCCtongsoCC"
+        android:text="Tổng số CC"
+        android:padding="10dp"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_width="0dp"
+        android:layout_weight="2"
+        android:layout_height="match_parent"
+        android:textColor="#fdfdfb"/>
+    <TextView
+        android:id="@+id/txtheaderBCCCtongsotruot"
+        android:text="Tổng số trượt"
+        android:padding="10dp"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_width="0dp"
+        android:layout_weight="2"
+        android:layout_height="match_parent"
+        android:textColor="#fdfdfb"/>-->
+</LinearLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/linearLayoutBCTD"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:weightSum="10"
+        >
+        <TextView
+            android:id="@+id/child_bctd_txtTen"
+            android:layout_width="0dp"
+            android:layout_weight="5"
+            android:layout_height="wrap_content"
+            android:text="Tên"
+            android:layout_marginLeft="20dp"
+            android:textSize="13dp"
+            android:textColor="#b7531a"
+            />
+        <TextView
+            android:id="@+id/child_bctd_giatri"
+            android:layout_width="0dp"
+            android:layout_weight="5"
+            android:layout_height="wrap_content"
+            android:text="Giá trị"
+            android:textSize="13dp"
+            android:textColor="#b7531a"
+            android:gravity="right"/>
+        <!--<TextView 2e2e29
+            android:id="@+id/child_bctd_donvi"
+            android:layout_width="0dp"
+            android:layout_weight="0.4"
+            android:layout_height="wrap_content"
+            android:text="dv"
+            android:layout_marginRight="5dp"
+            android:textSize="15dp"
+            android:textColor="#2e2e29"
+            android:gravity="left"/>-->
+    </LinearLayout>
+
+</LinearLayout>

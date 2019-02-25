@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0095da"
+    android:weightSum="12"
+    android:numColumns="auto_fit"
+    >
+
+    <TextView
+        android:id="@+id/txtheaderCongty"
+        android:text="Công ty"
+        android:padding="10dp"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_width="0dp"
+        android:layout_weight="2"
+        android:layout_height="match_parent"
+        android:textColor="#fdfdfb"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/txtheaderSolieutrongngay"
+        android:text="DT ngày"
+        android:padding="10dp"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_width="0dp"
+        android:layout_weight="2"
+        android:layout_height="match_parent"
+        android:textColor="#fdfdfb"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/txtheaderMTD"
+        android:text="MTD"
+        android:padding="10dp"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_width="0dp"
+        android:layout_weight="2"
+        android:layout_height="match_parent"
+        android:textColor="#fdfdfb"
+        android:gravity="center"/>
+    <TextView
+        android:id="@+id/txtheaderKHthang"
+        android:text="CK năm trước"
+        android:padding="10dp"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_width="0dp"
+        android:layout_weight="2"
+        android:layout_height="match_parent"
+        android:textColor="#fdfdfb"
+        android:gravity="center"/>
+    <TextView
+        android:id="@+id/txtheaderTLthang"
+        android:text="TL LK tháng CK"
+        android:padding="10dp"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_width="0dp"
+        android:layout_weight="2"
+        android:layout_height="match_parent"
+        android:textColor="#fdfdfb"
+        android:gravity="center"/>
+    <TextView
+        android:id="@+id/txtheaderLKnamCK"
+        android:text="LK năm CK"
+        android:padding="10dp"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_width="0dp"
+        android:layout_weight="2"
+        android:layout_height="match_parent"
+        android:textColor="#fdfdfb"
+        android:gravity="center"/>
+</LinearLayout>

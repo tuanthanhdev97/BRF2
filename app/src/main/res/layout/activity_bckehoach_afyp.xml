@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.baoviet.bvlife.bfr.activity.BCKehoachAFYPActivity"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbarbaocaoKHAFYP"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/bvl_logo"
+        app:title=" "
+        app:titleTextColor="#b3b36c">
+    </android.support.v7.widget.Toolbar>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="Kế hoạch AFYP"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:textColor="#6da1ef"
+        />
+    <TextView
+        android:id="@+id/txtbcUpdatetime"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="Dữ liệu cập nhật đến ngày:"
+        android:textSize="15dp"
+        android:textStyle="italic"
+        android:textColor="#0d0b0b"
+        />
+    <android.support.v7.widget.SearchView
+        android:id="@+id/searchviewbaocaoKHAFYP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:queryHint="Search..."
+        android:background="#eaead8"
+        android:tooltipText="Filter"
+        >
+
+    </android.support.v7.widget.SearchView>
+    <ExpandableListView
+        android:id="@+id/expandlistviewbaocaoKHAFYP"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </ExpandableListView>
+
+
+</LinearLayout>

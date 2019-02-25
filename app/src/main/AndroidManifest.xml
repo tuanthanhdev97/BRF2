@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.baoviet.bvlife.bfr">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_foreground_mrp2"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".activity.LoginActivity"
+            android:configChanges="orientation|keyboardHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.ContentActivity" />
+        <activity android:name=".activity.BCKinhdoanhActivity" />
+        <activity android:name=".activity.BCTuyendungActivity" />
+        <!--
+        <activity android:name=".activity.BCChungchiActivity" />
+        <activity android:name=".activity.BCKehoachTuyendungActivity" />
+        <activity android:name=".activity.BCKehoachAFYPActivity"></activity>
+        -->
+        <activity android:name=".activity.BCChiTietDoanhThuActivity" />
+        <activity android:name=".activity.BCChiTietTuyenDungActivity" />
+        <activity android:name=".activity.TestActivity"></activity>
+        <activity android:name=".activity.TimkiemActivity"></activity>
+    </application>
+
+</manifest>

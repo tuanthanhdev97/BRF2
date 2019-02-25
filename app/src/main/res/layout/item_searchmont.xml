@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="3"
+        >
+        <TextView
+            android:background="@drawable/border_textview"
+            android:gravity="center_horizontal"
+            android:id="@+id/txtMonthItem"
+            android:layout_weight="1"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="1/2/2019"
+            android:padding="10dp"
+            android:textColor="@color/chitieu"
+            />
+        <TextView
+            android:background="@drawable/border_textview"
+            android:gravity="center_horizontal"
+            android:id="@+id/txtDoanhThuItem"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/chitieu"
+            android:padding="10dp"
+            android:text="13,204,258"
+            />
+
+        <TextView
+            android:background="@drawable/border_textview"
+            android:gravity="center_horizontal"
+            android:id="@+id/txtTuyendung"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/chitieu"
+            android:padding="10dp"
+            android:text="13,204,258"
+            />
+    </LinearLayout>
+</LinearLayout>

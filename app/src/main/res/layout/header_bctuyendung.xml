@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0095da"
+    android:weightSum="9">
+
+    <TextView
+        android:id="@+id/txtheaderBCTDCongty"
+        android:text="Công ty"
+        android:padding="10dp"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_width="0dp"
+        android:layout_weight="3"
+        android:layout_height="match_parent"
+        android:textColor="#fdfdfb"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/txtheaderBCTDthuctuyen_luykethang"
+        android:text="Số TD tháng"
+        android:padding="10dp"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_width="0dp"
+        android:layout_weight="3"
+        android:layout_height="match_parent"
+        android:textColor="#fdfdfb"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/txtheaderBCTDthuctuyen_datchitieu"
+        android:text="TL KH tháng"
+        android:padding="10dp"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_width="0dp"
+        android:layout_weight="3"
+        android:layout_height="match_parent"
+        android:textColor="#fdfdfb"
+        android:gravity="center"/>
+    <!--<TextView
+        android:id="@+id/txtheaderBCTDthuctuyen_datchitieu"
+        android:text="% đạt chỉ tiêu"
+        android:padding="10dp"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_width="0dp"
+        android:layout_weight="2"
+        android:layout_height="match_parent"
+        android:textColor="#fdfdfb"/>
+    <TextView
+        android:id="@+id/txtheaderBCTDluyke"
+        android:text="Lũy kế"
+        android:padding="10dp"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_width="0dp"
+        android:layout_weight="2"
+        android:layout_height="match_parent"
+        android:textColor="#fdfdfb"/>-->
+</LinearLayout>

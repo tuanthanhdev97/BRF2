@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.baoviet.bvlife.bfr.activity.BCTuyendungActivity"
+    android:orientation="vertical">
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawerlayoutBCTD"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--<android.support.v7.widget.Toolbar
+                android:id="@+id/toolbarbaocaotuyendung"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@drawable/bvl_logo"
+                app:title=" "
+                app:titleTextColor="#b3b36c">
+            </android.support.v7.widget.Toolbar>-->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#005baa"
+                >
+                <LinearLayout
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    >
+                    <ImageView
+                        android:id="@+id/imgbctuyendungMenu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_menu"
+                        android:layout_gravity="center"
+                        android:gravity="center"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="center">
+                    <android.support.v7.widget.Toolbar
+                        android:id="@+id/toolbarbaocaotuyendung"
+                        android:layout_width="250dp"
+                        android:layout_height="?attr/actionBarSize"
+                        android:layout_gravity="center"
+                        android:background="@drawable/ic_logo_banner"
+                        android:gravity="center"
+                        app:title=" ">
+
+                    </android.support.v7.widget.Toolbar>
+                </LinearLayout>
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    >
+                    <ImageView
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:id="@+id/imgSearch"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/icon_search"
+                        >
+                    </ImageView>
+                </RelativeLayout>
+
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="Tuyển dụng"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:textColor="#0095da"
+                />
+            <TextView
+                android:id="@+id/txtbctuyendungUpdatetime"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:text="Dữ liệu đến"
+                android:textSize="15dp"
+                android:textStyle="italic"
+                android:textColor="#0d0b0b"
+                />
+            <!--<TextView 00000000  10100e af966b
+                android:id="@+id/txtbctuyendungUpload"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:text="Dữ liệu được cập nhật lúc:"
+                android:textSize="15dp"
+                android:textStyle="italic"
+                android:textColor="#0d0b0b"
+                />-->
+            <android.support.v7.widget.SearchView
+                android:id="@+id/searchviewbaocaotuyendung"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:queryHint="Search..."
+                android:background="#eaead8"
+                android:visibility="gone"
+                android:tooltipText="Filter"
+                >
+
+            </android.support.v7.widget.SearchView>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+                    <TableLayout
+                        android:background="@color/chitieu"
+                        android:paddingLeft="5dp"
+                        android:id="@+id/table_Congty"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <com.baoviet.bvlife.bfr.activity.ObservableScrollView
+                        android:id="@+id/ScrollViewC"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TableLayout
+                            android:paddingLeft="5dp"
+                            android:background="@color/bk_bckinhdoanh_left"
+                            android:id="@+id/fixed_column"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </com.baoviet.bvlife.bfr.activity.ObservableScrollView>
+                </LinearLayout>
+                <HorizontalScrollView
+                    android:id="@+id/HorizontalScrollViewB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        >
+                        <TableLayout
+                            android:paddingLeft="5dp"
+                            android:background="@color/chitieu"
+                            android:id="@+id/table_header"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <com.baoviet.bvlife.bfr.activity.ObservableScrollView
+                            android:id="@+id/ScrollViewD"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TableLayout
+                                android:paddingLeft="5dp"
+                                android:background="@color/bk_bckinhdoanh_right"
+                                android:id="@+id/scrollable_part"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"/>
+                        </com.baoviet.bvlife.bfr.activity.ObservableScrollView>
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </LinearLayout>
+            <!--<LinearLayout-->
+                <!--android:orientation="horizontal"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:background="#0095da"-->
+                <!--android:weightSum="9">-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/txtheaderBCTDCongty"-->
+                    <!--android:text="Công ty"-->
+                    <!--android:padding="10dp"-->
+                    <!--android:textSize="15sp"-->
+                    <!--android:textStyle="bold"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_weight="3"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:textColor="#fdfdfb"-->
+                    <!--android:gravity="center"-->
+                    <!--/>-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/txtheaderBCTDthuctuyen_luykethang"-->
+                    <!--android:text="Số TD tháng"-->
+                    <!--android:padding="10dp"-->
+                    <!--android:textSize="15sp"-->
+                    <!--android:textStyle="bold"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_weight="3"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:textColor="#fdfdfb"-->
+                    <!--android:gravity="center"/>-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/txtheaderBCTDthuctuyen_datchitieu"-->
+                    <!--android:text="TL KH tháng"-->
+                    <!--android:padding="10dp"-->
+                    <!--android:textSize="15sp"-->
+                    <!--android:textStyle="bold"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_weight="3"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:textColor="#fdfdfb"-->
+                    <!--android:gravity="center"/>-->
+                <!--<TextView
+                    android:id="@+id/txtheaderBCTDthuctuyen_datchitieu"
+                    android:text="% đạt chỉ tiêu"
+                    android:padding="10dp"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="match_parent"
+                    android:textColor="#fdfdfb"/>
+                <TextView
+                    android:id="@+id/txtheaderBCTDluyke"
+                    android:text="Lũy kế"
+                    android:padding="10dp"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="match_parent"
+                    android:textColor="#fdfdfb"/>-->
+            <!--</LinearLayout>-->
+            <!--<ListView-->
+                <!--android:id="@+id/listviewTDL"-->
+                <!--android:childDivider="#af966b"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:visibility="gone"-->
+                <!--android:layout_height="wrap_content">-->
+
+            <!--</ListView>-->
+            <!--<View-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="1dp"-->
+                <!--android:background="#af966b"></View>-->
+            <!--<ListView-->
+                <!--android:id="@+id/listviewbaocaotuyendung"-->
+                <!--android:childDivider="#af966b"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent">-->
+
+            <!--</ListView>-->
+
+        </LinearLayout>
+        <android.support.design.widget.NavigationView
+            android:id="@+id/navigationview"
+            android:layout_gravity ="start"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!--<LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:weightSum="10">
+                    <ImageView
+                        android:id="@+id/imgMenuUsername"
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/username_menu"/>
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="5"
+                        android:weightSum="10">
+
+                        <TextView
+                            android:id="@+id/txtMenuFullname"
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_weight="5"
+                            android:gravity="center"
+                            android:text="FullName"
+                            android:textColor="#111112"
+                            android:textSize="15dp" />
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="4.5"
+                            android:weightSum="10">
+                            <ImageView
+                                android:layout_width="0dp"
+                                android:layout_weight="2"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/global_icon"/>
+                            <TextView
+                                android:id="@+id/txtMenuUsername"
+                                android:layout_width="0dp"
+                                android:layout_weight="8"
+                                android:layout_height="wrap_content"
+                                android:text="Username"
+                                android:textColor="#111112"
+                                android:textSize="17dp"
+                                android:gravity="left"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <ImageView
+                        android:id="@+id/imgMenuDroparrow"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="left"
+                        android:src="@mipmap/ic_arrow_drop"/>
+                </LinearLayout>-->
+                <ExpandableListView
+                    android:dividerHeight="1dp"
+                    android:divider="#0095da"
+                    android:groupIndicator="@null"
+                    android:listSelector="#eded9a"
+                    android:id="@+id/expandablelistviewMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                </ExpandableListView>
+            </LinearLayout>
+        </android.support.design.widget.NavigationView>
+
+
+
+    </android.support.v4.widget.DrawerLayout>
+
+    <!--<android.support.v7.widget.Toolbar
+        android:id="@+id/toolbarbaocaotuyendung"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/bvl_logo"
+        app:title=" "
+        app:titleTextColor="#b3b36c">
+    </android.support.v7.widget.Toolbar>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="Tuyển dụng"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:textColor="#0095da"
+        />
+    <TextView
+        android:id="@+id/txtbctuyendungUpdatetime"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:text="Dữ liệu cập nhật đến ngày:"
+        android:textSize="15dp"
+        android:textStyle="italic"
+        android:textColor="#0d0b0b"
+        />
+    <TextView
+        android:id="@+id/txtbctuyendungUpload"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:text="Dữ liệu được cập nhật lúc:"
+        android:textSize="15dp"
+        android:textStyle="italic"
+        android:textColor="#0d0b0b"
+        />
+    <android.support.v7.widget.SearchView
+        android:id="@+id/searchviewbaocaotuyendung"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:queryHint="Search..."
+        android:background="#eaead8"
+        android:tooltipText="Filter"
+        >
+
+    </android.support.v7.widget.SearchView>
+    <ExpandableListView
+        android:id="@+id/expandlistviewbaocaotuyendung"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </ExpandableListView>-->
+
+
+</LinearLayout>

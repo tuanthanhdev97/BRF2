@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="12">
+
+    <android.support.v7.widget.CardView
+        app:cardCornerRadius="4dp"
+        app:cardBackgroundColor="#e4ecf1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/txtdongBCkinhdoanhCongty"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                android:text="Công ty"
+                android:textColor="#080808"
+                android:textSize="15sp"
+                android:layout_marginStart="1dp"/>
+
+            <TextView
+                android:id="@+id/txtdongBCkinhdoanhSolieutrongngay"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                android:text="Số liệu trong ngày"
+                android:textColor="#080808"
+                android:textSize="15sp"
+                android:layout_gravity="right"
+                android:gravity="right"/>
+            <TextView
+                android:id="@+id/txtdongBCkinhdoanhMTD"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                android:text="MTD"
+                android:textColor="#080808"
+                android:textSize="15sp"
+                android:gravity="right"
+                />
+            <TextView
+                android:id="@+id/txtdongBCkinhdoanhCKnamtruoc"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                android:text="CK năm trước"
+                android:textColor="#080808"
+                android:textSize="15sp"
+                android:gravity="right"
+                />
+            <TextView
+                android:id="@+id/txtdongBCkinhdoanhTLLKthangCK"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                android:text="TL_LK tháng CK"
+                android:textColor="#080808"
+                android:textSize="15sp"
+                android:gravity="right"
+                />
+            <TextView
+                android:id="@+id/txtdongBCkinhdoanhLKnamCK"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                android:text="LK năm CK"
+                android:textColor="#080808"
+                android:textSize="15sp"
+                android:gravity="right"
+                />
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

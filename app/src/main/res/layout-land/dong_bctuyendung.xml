@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="12">
+
+    <android.support.v7.widget.CardView
+        app:cardCornerRadius="4dp"
+        app:cardBackgroundColor="#e4ecf1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/txtdongBCTDCongty"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                android:text="Công ty"
+                android:textColor="#080808"
+                android:textSize="15sp"
+                android:layout_marginStart="1dp"/>
+            <TextView
+                android:id="@+id/txtdongBCTDthuctuyen_luykethang"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                android:text="Lũy kế tháng"
+                android:textColor="#080808"
+                android:textSize="15sp"
+                android:gravity="right"
+                />
+            <TextView
+                android:id="@+id/txtdongBCTDthuctuyen_datchitieu"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                android:text="% đạt chỉ tiêu"
+                android:textColor="#080808"
+                android:textSize="15sp"
+                android:gravity="right"
+                />
+            <TextView
+                android:id="@+id/txtdongBCTD_STTluyke"
+                android:text="STT Lũy kế"
+                android:padding="10dp"
+                android:textSize="15sp"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent"
+                android:textColor="#080808"
+                android:gravity="right"/>
+            <TextView
+                android:id="@+id/txtdongBCTD_CCCLKthang"
+                android:text="CCC LK tháng"
+                android:padding="10dp"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent"
+                android:textColor="#080808"
+                android:gravity="right"/>
+            <TextView
+                android:id="@+id/txtdongBCTD_CCCLK"
+                android:text="CCC Lũy kế"
+                android:padding="10dp"
+                android:textSize="15sp"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent"
+                android:textColor="#080808"
+                android:gravity="right"/>
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

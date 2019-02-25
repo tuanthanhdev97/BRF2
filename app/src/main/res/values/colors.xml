@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorChartThang">#F08038</color>
+    <color name="colorChartQuy">#5098D8</color>
+    <color name="colorChartNam">#00B2EE</color>
+    <color name="chitieu">#0095da</color>
+    <color name="line_doanhthu">#FFCC00</color>
+    <color name="bk_bckinhdoanh_left">#fff</color>
+    <color name="bk_bckinhdoanh_right">#fff</color>
+</resources>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0095da"
+    android:weightSum="9">
+
+    <TextView
+        android:id="@+id/txtheaderBCKHTDCongty"
+        android:text="Công ty"
+        android:padding="10dp"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_width="0dp"
+        android:layout_weight="3"
+        android:layout_height="match_parent"
+        android:textColor="#fdfdfb"
+        />
+
+    <TextView
+        android:id="@+id/txtheaderBCKHTDTongctygiao"
+        android:text="Tổng Công ty giao"
+        android:padding="10dp"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_width="0dp"
+        android:layout_weight="3"
+        android:layout_height="match_parent"
+        android:textColor="#fdfdfb"/>
+
+    <TextView
+        android:id="@+id/txtheaderBCKHTDT1"
+        android:text="Tháng 1"
+        android:padding="10dp"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_width="0dp"
+        android:layout_weight="3"
+        android:layout_height="match_parent"
+        android:textColor="#fdfdfb"/>
+
+</LinearLayout>
