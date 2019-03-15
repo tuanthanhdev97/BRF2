@@ -186,7 +186,7 @@ public class ContentActivity extends AppCompatActivity {
         //listdataHeader.add(new MenuBaoCao(StringDefine.Baocaonhanh, R.drawable.report_icon));
         listdataHeader.add(new MenuBaoCao(StringDefine.Baocaodoanhthu, R.drawable.report_icon));
         listdataHeader.add(new MenuBaoCao(StringDefine.Baocaotuyendung, R.drawable.ic_employee));
-        listdataHeader.add(new MenuBaoCao("Tra cứu lịch sử", R.drawable.ic_employee));
+        listdataHeader.add(new MenuBaoCao("Tra cứu lịch sử", R.drawable.calendar));
         listdataHeader.add(new MenuBaoCao("Đăng xuất", R.mipmap.icon_logout));
 
         List<String> baocao = new ArrayList<String>();

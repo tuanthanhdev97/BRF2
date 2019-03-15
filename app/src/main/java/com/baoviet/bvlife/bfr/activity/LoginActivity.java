@@ -15,8 +15,14 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
+import com.android.volley.NetworkError;
+import com.android.volley.NoConnectionError;
+import com.android.volley.ParseError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
+import com.android.volley.RetryPolicy;
+import com.android.volley.ServerError;
+import com.android.volley.TimeoutError;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
@@ -92,6 +98,7 @@ public class LoginActivity extends AppCompatActivity {
                     }
 
                     //RequestQueue queue = MyVolley.getRequestQueue();
+
                     JsonObjectRequest jsObjRequest = new JsonObjectRequest(Request.Method.POST,StringDefine.URL_LOGIN,obj,
                             new com.android.volley.Response.Listener<JSONObject>() {
                                 @Override
@@ -150,12 +157,20 @@ public class LoginActivity extends AppCompatActivity {
                             new com.android.volley.Response.ErrorListener() {
                                 @Override
                                 public void onErrorResponse(VolleyError error) {
-                                    //Log.d("Error.Response", error.getMessage().toString());
+                                    if (error instanceof NetworkError) {
+                                    } else if (error instanceof ServerError) {
+                                    } else if (error instanceof AuthFailureError) {
+                                    } else if (error instanceof ParseError) {
+                                    } else if (error instanceof NoConnectionError) {
+                                    } else if (error instanceof TimeoutError) {
+                                        Toast.makeText(LoginActivity.this,
+                                                "Oops. Timeout error!",
+                                                Toast.LENGTH_LONG).show();
+                                    }
                                     hideDialog();
-                                    txtNoticeLogin.setText("Đã có lỗi trong quá trình đăng nhập, kiểm tra lại kết nối Internet!");
+                                    txtNoticeLogin.setText("Đã có lỗi trong quá trình đăng nhập, kiểm tra lại kết nối Internet");
                                 }
                             }){
-
                         @Override
                         public String getBodyContentType() {
                             return "application/json; charset=utf-8";
@@ -168,6 +183,22 @@ public class LoginActivity extends AppCompatActivity {
                             return headers;
                         }
                     };
+                    jsObjRequest.setRetryPolicy(new RetryPolicy() {
+                        @Override
+                        public int getCurrentTimeout() {
+                            return 50000;
+                        }
+
+                        @Override
+                        public int getCurrentRetryCount() {
+                            return 50000;
+                        }
+
+                        @Override
+                        public void retry(VolleyError error) throws VolleyError {
+
+                        }
+                    });
                     requestQueue.add(jsObjRequest);
 
                  /*   Intent intent = new Intent(LoginActivity.this, ContentActivity.class);

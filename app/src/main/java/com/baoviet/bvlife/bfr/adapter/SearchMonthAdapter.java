@@ -36,14 +36,14 @@ public class SearchMonthAdapter  extends ArrayAdapter<SearchMonth> {
             viewHolder = new ViewHolder();
             viewHolder.txtMonthItem = (TextView) convertView.findViewById(R.id.txtMonthItem);
             viewHolder.txtDoanhThuItem = (TextView) convertView.findViewById(R.id.txtDoanhThuItem);
-            viewHolder.txtTuyenDung =  convertView.findViewById(R.id.txtDoanhThuItem);
+            viewHolder.txtTuyenDung =  convertView.findViewById(R.id.txtTuyendung);
             convertView.setTag(viewHolder);
         } else {
             viewHolder = (ViewHolder) convertView.getTag();
         }
 
         SearchMonth value = arrValue.get(position);
-        viewHolder.txtMonthItem.setText(value.getThang());
+        viewHolder.txtMonthItem.setText("T"+value.getThang());
         viewHolder.txtDoanhThuItem.setText(value.getDoanhthu()+"");
         viewHolder.txtTuyenDung.setText(value.getTuyendung()+"");
         return convertView;

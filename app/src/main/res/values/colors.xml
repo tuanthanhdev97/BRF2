@@ -10,4 +10,5 @@
     <color name="line_doanhthu">#FFCC00</color>
     <color name="bk_bckinhdoanh_left">#fff</color>
     <color name="bk_bckinhdoanh_right">#fff</color>
+    <color name="text_defaul">#000</color>
 </resources>

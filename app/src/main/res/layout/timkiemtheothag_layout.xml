@@ -1,87 +1,213 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#005baa"
+        >
+
+        <ImageButton
+            android:layout_marginLeft="5dp"
+            android:id="@+id/btnBackmonth"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/back"
+            android:layout_centerVertical="true"
+            />
+
+        <!--android:background="@drawable/ic_logo_banner"-->
+        <ImageView
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="40dp"
+            android:layout_toRightOf="@+id/imgbckinhdoanhMenu"
+            android:id="@+id/toolbarbaocaokinhdoanh"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:background="@drawable/ic_logo_banner"
+            android:layout_centerHorizontal="true"
+            android:minHeight="?attr/actionBarSize"
+            ></ImageView>
+
+        <ImageView
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentRight="true"
+            android:id="@+id/btnSearchMorethang"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/icon_search"
+            >
+        </ImageView>
+    </RelativeLayout>
     <LinearLayout
+        android:visibility="gone"
+        android:padding="5dp"
+        android:id="@+id/lnInfor"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    <TextView
+        android:padding="5dp"
+        android:layout_marginLeft="10dp"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        android:layout_width="wrap_content"
+        android:textAlignment="center"
+        android:layout_height="wrap_content"
+        android:textColor="#000"
+        android:id="@+id/txtTP"
+        />
+    <RelativeLayout
+        android:layout_marginLeft="20dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content">
-        <TextView
+        <LinearLayout
+            android:layout_centerHorizontal="true"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Tra cứu lịch sử"
-            android:padding="10dp"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:textColor="@color/chitieu"
-            />
-        <TextView
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/chitieu"
-            android:text="-"
-            />
-        <TextView
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/chitieu"
-            android:text="Quảng Ninh"
-            android:padding="10dp"
-            />
+            android:layout_height="wrap_content">
+            <TextView
+                android:textStyle="italic"
+                android:layout_toRightOf="@+id/txt2"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:id="@+id/txtInforStartMonth"
+
+                />
+            <TextView
+                android:layout_toRightOf="@+id/txtInforStartMonth"
+                android:textSize="16sp"
+                android:text="-"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:id="@+id/txt3"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                />
+            <TextView
+                android:textStyle="italic"
+                android:layout_toRightOf="@+id/txt3"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:id="@+id/txtInforEndMonth"
+                />
+        </LinearLayout>
+
+    </RelativeLayout>
     </LinearLayout>
-
-    <com.github.mikephil.charting.charts.CombinedChart
-        android:id="@+id/chart1"
-        android:layout_margin="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"/>
-
     <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/rlContent"
         android:layout_width="match_parent"
-        android:weightSum="3"
-        android:background="@color/colorPrimary"
-        android:layout_height="wrap_content">
-        <TextView
-            android:gravity="center"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:text="Tháng"
-            android:id="@+id/txtSapxepNgay"
-            android:layout_weight="1"
-            android:padding="10dp"
-            android:textColor="@color/bk_bckinhdoanh_left"
-            />
-        <TextView
-            android:gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/bk_bckinhdoanh_left"
-            android:id="@+id/txtSapxepDoanhthu"
-            android:text="Doanh Thu (tr)"
-            android:padding="10dp"
-            android:layout_weight="1"
-            />
-        <TextView
-            android:gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/bk_bckinhdoanh_left"
-            android:text="Tuyển Dụng"
-            android:padding="10dp"
-            android:layout_weight="1"
-            />
-    </LinearLayout>
+        android:layout_marginBottom="70dp"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.CardView
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="270dp">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:id="@+id/txtNoti"
+                        android:layout_width="300dp"
+                        android:visibility="gone"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorChartThang"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content" />
 
-    <ListView
-        android:id="@+id/lvThang"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-    </ListView>
+                    <LinearLayout
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            >
+                            <TableLayout
+                                android:background="@color/chitieu"
+                                android:id="@+id/table_Congty"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                            <com.baoviet.bvlife.bfr.activity.ObservableScrollView
+                                android:id="@+id/ScrollViewC"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                                <TableLayout
+
+                                    android:background="@color/bk_bckinhdoanh_left"
+                                    android:id="@+id/fixed_column"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+                            </com.baoviet.bvlife.bfr.activity.ObservableScrollView>
+                        </LinearLayout>
+                        <HorizontalScrollView
+                            android:id="@+id/HorizontalScrollViewB"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                >
+                                <TableLayout
+
+                                    android:background="@color/chitieu"
+                                    android:id="@+id/table_header"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+                                <com.baoviet.bvlife.bfr.activity.ObservableScrollView
+                                    android:id="@+id/ScrollViewD"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+                                    <TableLayout
+
+                                        android:background="@color/bk_bckinhdoanh_right"
+                                        android:id="@+id/scrollable_part"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="fill_parent"/>
+                                </com.baoviet.bvlife.bfr.activity.ObservableScrollView>
+                            </LinearLayout>
+                        </HorizontalScrollView>
+                    </LinearLayout>
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <com.github.mikephil.charting.charts.CombinedChart
+            android:id="@+id/chartmonth"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
 
 </LinearLayout>

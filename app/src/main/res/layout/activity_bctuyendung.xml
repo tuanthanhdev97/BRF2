@@ -125,7 +125,7 @@
                     >
                     <TableLayout
                         android:background="@color/chitieu"
-                        android:paddingLeft="5dp"
+
                         android:id="@+id/table_Congty"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
@@ -134,7 +134,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content">
                         <TableLayout
-                            android:paddingLeft="5dp"
+
                             android:background="@color/bk_bckinhdoanh_left"
                             android:id="@+id/fixed_column"
                             android:layout_width="wrap_content"
@@ -151,7 +151,7 @@
                         android:orientation="vertical"
                         >
                         <TableLayout
-                            android:paddingLeft="5dp"
+
                             android:background="@color/chitieu"
                             android:id="@+id/table_header"
                             android:layout_width="wrap_content"
@@ -161,7 +161,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content">
                             <TableLayout
-                                android:paddingLeft="5dp"
+
                                 android:background="@color/bk_bckinhdoanh_right"
                                 android:id="@+id/scrollable_part"
                                 android:layout_width="fill_parent"

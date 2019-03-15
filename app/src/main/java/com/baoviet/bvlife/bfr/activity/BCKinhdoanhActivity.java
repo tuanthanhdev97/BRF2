@@ -148,12 +148,12 @@ public class BCKinhdoanhActivity extends AppCompatActivity implements ScrollView
 
         TableRow.LayoutParams wrapWrapTableRowParams = new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT, TableRow.LayoutParams.WRAP_CONTENT);
 
-        int fixedRowHeight = 70;
+        int fixedRowHeight = 100;
         for( i = 0; i < arrBCkinhdoanh.size(); i++) {
             row = new TableRow(this);
             row.setLayoutParams(wrapWrapTableRowParams);
             row.setGravity(Gravity.CENTER);
-            row.addView(makeTableRowWithText2(arrBCkinhdoanh.get(i).getCongty(), scrollableColumnWidths[0], fixedRowHeight));
+            row.addView(makeTableRowWithText(arrBCkinhdoanh.get(i).getCongty(), scrollableColumnWidths[0], fixedRowHeight));
             fixedColumn.addView(row);
             row.setClickable(true);
             row.setOnClickListener(new OnClickListener() {
@@ -270,6 +270,8 @@ public class BCKinhdoanhActivity extends AppCompatActivity implements ScrollView
         recyclableTextView.setText(text);
         recyclableTextView.setTextColor(Color.WHITE);
         recyclableTextView.setTextSize(16);
+        recyclableTextView.setPadding(0,20,0,0);
+        recyclableTextView.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
         recyclableTextView.setWidth(widthInPercentOfScreenWidth * screenWidth / 100);
         recyclableTextView.setHeight(fixedHeightInPixels);
         recyclableTextView.setTag(position);
@@ -326,13 +328,28 @@ public class BCKinhdoanhActivity extends AppCompatActivity implements ScrollView
         int screenWidth = getResources().getDisplayMetrics().widthPixels;
         recyclableTextView = new TextView(this);
         recyclableTextView.setText(text);
+        recyclableTextView.setBackgroundResource(R.drawable.border_textview);
+        recyclableTextView.setTextAlignment(View.TEXT_ALIGNMENT_TEXT_END);
+        recyclableTextView.setPadding(0,15,20,15);
         recyclableTextView.setTextColor(Color.BLACK);
         recyclableTextView.setTextSize(16);
         recyclableTextView.setWidth(widthInPercentOfScreenWidth * screenWidth / 100);
         recyclableTextView.setHeight(fixedHeightInPixels);
         return recyclableTextView;
     }
-
+    public TextView makeTableRowWithText(String text, int widthInPercentOfScreenWidth, int fixedHeightInPixels) {
+        int screenWidth = getResources().getDisplayMetrics().widthPixels;
+        recyclableTextView = new TextView(this);
+        recyclableTextView.setBackgroundResource(R.drawable.border_textview);
+        recyclableTextView.setText(text);
+        recyclableTextView.setTextAlignment(View.TEXT_ALIGNMENT_TEXT_START);
+        recyclableTextView.setPadding(0,15,20,15);
+        recyclableTextView.setTextColor(Color.BLACK);
+        recyclableTextView.setTextSize(16);
+        recyclableTextView.setWidth(widthInPercentOfScreenWidth * screenWidth / 100);
+        recyclableTextView.setHeight(fixedHeightInPixels);
+        return recyclableTextView;
+    }
 
     private void sortDataCongty() {
         if(unSortedCT) {
@@ -398,6 +415,7 @@ public class BCKinhdoanhActivity extends AppCompatActivity implements ScrollView
         listdataHeaderMenu.add(new MenuBaoCao("Trang chủ", R.drawable.ic_homepage));
         listdataHeaderMenu.add(new MenuBaoCao(StringDefine.Baocaodoanhthu, R.drawable.report_icon));
         listdataHeaderMenu.add(new MenuBaoCao(StringDefine.Baocaotuyendung, R.drawable.ic_employee));
+        listdataHeaderMenu.add(new MenuBaoCao("Tra cứu lịch sử", R.drawable.calendar));
         listdataHeaderMenu.add(new MenuBaoCao("Đăng xuất", R.mipmap.icon_logout));
 
         List<String> baocao = new ArrayList<String>();
@@ -433,6 +451,15 @@ public class BCKinhdoanhActivity extends AppCompatActivity implements ScrollView
                         intentBCKinhdoanh.putExtra("token",bundle);
                     }
                     startActivity(intentBCKinhdoanh);
+                    drawerLayout.closeDrawer(GravityCompat.START);
+                }else if(listdataHeaderMenu.get(groupPosition).getTen().toString().equals("Tra cứu lịch sử")){
+                    Intent intentTimkiem = new Intent(BCKinhdoanhActivity.this,TimkiemActivity.class);
+                    if(bundle != null){
+                        String token = bundle.getString("token_login");
+                        bundle.putString("token_login", token);
+                        intentTimkiem.putExtra("token",bundle);
+                    }
+                    startActivity(intentTimkiem);
                     drawerLayout.closeDrawer(GravityCompat.START);
                 }else if(listdataHeaderMenu.get(groupPosition).getTen().toString().equals(StringDefine.Baocaotuyendung)){
                     Intent intentBCTuyendung = new Intent(getApplicationContext(),BCTuyendungActivity.class);
@@ -491,7 +518,7 @@ public class BCKinhdoanhActivity extends AppCompatActivity implements ScrollView
 
         TableRow.LayoutParams wrapWrapTableRowParams = new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT, TableRow.LayoutParams.WRAP_CONTENT);
 
-        int fixedHeaderHeight = 80;
+        int fixedHeaderHeight = 120;
 
         row = new TableRow(this);
         row.setLayoutParams(wrapWrapTableRowParams);

@@ -51,7 +51,7 @@ public class SearchDayAdapter extends ArrayAdapter<SearchDay> {
             }
         }
         viewHolder.txtDayItem.setText(value.getNgay());
-        viewHolder.txtDoanhThuItem.setText(value.getDoanhthu()+"");
+        viewHolder.txtDoanhThuItem.setText(""+value.getDoanhthu());
         viewHolder.progValueItem.setMax(max);
         viewHolder.progValueItem.setProgress(value.getDoanhthu());
         return convertView;

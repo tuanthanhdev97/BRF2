@@ -152,27 +152,27 @@ public class BCTuyendungActivity extends AppCompatActivity implements ScrollView
             fixedColumnWidths = new int[]{25, 15, 15, 15,15,15, 15, 15,15,15, 15, 15,15, 15,15, 15,15, 15};
         }
         else{
-            scrollableColumnWidths = new int[]{40, 25, 25, 25,25,25, 25, 25,25,25, 25, 25,25, 25,25, 25,25, 25};
-            fixedColumnWidths = new int[]{40, 25, 25, 25,25,25, 25, 25,25,25, 25, 25,25, 25,25, 25,25, 25};
+            scrollableColumnWidths = new int[]{40, 25, 25, 30,35,35, 30, 30,28,30, 25, 35,35, 35,35, 35,35, 35};
+            fixedColumnWidths = new int[]{40, 25, 25, 30,35,35, 30, 30,28,30, 25, 35,35, 35,35, 35,35, 35};
         }
         Anhxa();
         ActionToolbar();
         getReportData();
 
     }
-    private void test(ArrayList<BCTuyendung> arrayList) {
+    private void getData(ArrayList<BCTuyendung> arrayList) {
         arrBCkinhdoanh = new ArrayList<>();
         fixedColumn.removeAllViews();
         scrollablePart.removeAllViews();
         arrBCkinhdoanh = arrayList;
 
         TableRow.LayoutParams wrapWrapTableRowParams = new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT, TableRow.LayoutParams.WRAP_CONTENT);
-        int fixedRowHeight = 70;
+        int fixedRowHeight = 100;
         for( i = 0; i < arrBCkinhdoanh.size(); i++) {
             row = new TableRow(this);
             row.setLayoutParams(wrapWrapTableRowParams);
             row.setGravity(Gravity.CENTER);
-            row.addView(makeTableRowWithText2(arrBCkinhdoanh.get(i).getCongty(), scrollableColumnWidths[0], fixedRowHeight));
+            row.addView(makeTableRowWithText(arrBCkinhdoanh.get(i).getCongty(), scrollableColumnWidths[0], fixedRowHeight));
             fixedColumn.addView(row);
             row.setClickable(true);
             row.setOnClickListener(new View.OnClickListener() {
@@ -275,11 +275,27 @@ public class BCTuyendungActivity extends AppCompatActivity implements ScrollView
 
 
     }
+    public TextView makeTableRowWithText(String text, int widthInPercentOfScreenWidth, int fixedHeightInPixels) {
+        int screenWidth = getResources().getDisplayMetrics().widthPixels;
+        recyclableTextView = new TextView(this);
+        recyclableTextView.setBackgroundResource(R.drawable.border_textview);
+        recyclableTextView.setText(text);
+        recyclableTextView.setTextAlignment(View.TEXT_ALIGNMENT_TEXT_START);
+        recyclableTextView.setPadding(0,15,20,15);
+        recyclableTextView.setTextColor(Color.BLACK);
+        recyclableTextView.setTextSize(16);
+        recyclableTextView.setWidth(widthInPercentOfScreenWidth * screenWidth / 100);
+        recyclableTextView.setHeight(fixedHeightInPixels);
+        return recyclableTextView;
+    }
+
     public TextView makeTableRowWithText(final String text, int widthInPercentOfScreenWidth, int fixedHeightInPixels, int position) {
         int screenWidth = getResources().getDisplayMetrics().widthPixels;
         recyclableTextView = new TextView(this);
         recyclableTextView.setText(text);
         recyclableTextView.setTextColor(Color.WHITE);
+        recyclableTextView.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+        recyclableTextView.setPadding(0,20,0,0);
         recyclableTextView.setTextSize(16);
         recyclableTextView.setWidth(widthInPercentOfScreenWidth * screenWidth / 100);
         recyclableTextView.setHeight(fixedHeightInPixels);
@@ -312,7 +328,7 @@ public class BCTuyendungActivity extends AppCompatActivity implements ScrollView
                                             unSortedCT = true;
                                             unSorted=true;
                                         }
-                            test(listdataHeader);
+                            getData(listdataHeader);
     }
 
     private void sortData() {
@@ -328,7 +344,7 @@ public class BCTuyendungActivity extends AppCompatActivity implements ScrollView
                                             unSortedCT = true;
                                             unSortedMTD = true;
                                         }
-                            test(listdataHeader);
+                            getData(listdataHeader);
     }
 
     public TextView makeTableRowWithText2(String text, int widthInPercentOfScreenWidth, int fixedHeightInPixels) {
@@ -336,6 +352,9 @@ public class BCTuyendungActivity extends AppCompatActivity implements ScrollView
         recyclableTextView = new TextView(this);
         recyclableTextView.setText(text);
         recyclableTextView.setTextColor(Color.BLACK);
+        recyclableTextView.setTextAlignment(View.TEXT_ALIGNMENT_TEXT_END);
+        recyclableTextView.setPadding(0,15,20,15);
+        recyclableTextView.setBackgroundResource(R.drawable.border_textview);
         recyclableTextView.setTextSize(16);
         recyclableTextView.setWidth(widthInPercentOfScreenWidth * screenWidth / 100);
         recyclableTextView.setHeight(fixedHeightInPixels);
@@ -359,6 +378,9 @@ public class BCTuyendungActivity extends AppCompatActivity implements ScrollView
 //        ListViewBc.setAdapter(bcExpendAdapter);
     }
 
+
+
+
     private void getReportData() {
         // Add a header to the ListView
         LayoutInflater inflater = getLayoutInflater();
@@ -379,7 +401,6 @@ public class BCTuyendungActivity extends AppCompatActivity implements ScrollView
 
         // Doc du lieu tu Services
         RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
-
         HashMap<String, String> params = new HashMap<String, String>();
         params.put("token", token);
         getTTTTT(params);
@@ -621,12 +642,12 @@ public class BCTuyendungActivity extends AppCompatActivity implements ScrollView
                                                 filterList.add(bc);
                                             }
                                         }
-                                        test(filterList);
+                                        getData(filterList);
                                         return false;
                                     }
                                 });
                                 sortDataCongty();
-                                test(listdataHeader);
+                                getData(listdataHeader);
                                 // Sort
 //                                txtheaderBCTDCongty.setOnClickListener(new View.OnClickListener() {
 //                                    @Override
@@ -814,7 +835,7 @@ public class BCTuyendungActivity extends AppCompatActivity implements ScrollView
         scrollablePart = (TableLayout) findViewById(R.id.scrollable_part);
 
         TableRow.LayoutParams wrapWrapTableRowParams = new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT, TableRow.LayoutParams.WRAP_CONTENT);
-        int fixedHeaderHeight = 80;
+        int fixedHeaderHeight = 120;
 
         row = new TableRow(this);
         row.setLayoutParams(wrapWrapTableRowParams);
@@ -892,6 +913,7 @@ public class BCTuyendungActivity extends AppCompatActivity implements ScrollView
         listdataHeaderMenu.add(new MenuBaoCao("Trang chủ", R.drawable.ic_homepage));
         listdataHeaderMenu.add(new MenuBaoCao(StringDefine.Baocaodoanhthu, R.drawable.report_icon));
         listdataHeaderMenu.add(new MenuBaoCao(StringDefine.Baocaotuyendung, R.drawable.ic_employee));
+        listdataHeaderMenu.add(new MenuBaoCao("Tra cứu lịch sử", R.drawable.calendar));
         listdataHeaderMenu.add(new MenuBaoCao("Đăng xuất", R.mipmap.icon_logout));
 
         List<String> baocao = new ArrayList<String>();
@@ -927,6 +949,15 @@ public class BCTuyendungActivity extends AppCompatActivity implements ScrollView
                         intentBCKinhdoanh.putExtra("token",bundle);
                     }
                     startActivity(intentBCKinhdoanh);
+                    drawerLayout.closeDrawer(GravityCompat.START);
+                }else if(listdataHeaderMenu.get(groupPosition).getTen().toString().equals("Tra cứu lịch sử")){
+                    Intent intentTimkiem = new Intent(BCTuyendungActivity.this,TimkiemActivity.class);
+                    if(bundle != null){
+                        String token = bundle.getString("token_login");
+                        bundle.putString("token_login", token);
+                        intentTimkiem.putExtra("token",bundle);
+                    }
+                    startActivity(intentTimkiem);
                     drawerLayout.closeDrawer(GravityCompat.START);
                 }else if(listdataHeaderMenu.get(groupPosition).getTen().toString().equals(StringDefine.Baocaotuyendung)){
                     Intent intentBCTuyendung = new Intent(getApplicationContext(),BCTuyendungActivity.class);

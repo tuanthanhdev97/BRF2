@@ -1,8 +1,8 @@
 package com.baoviet.bvlife.bfr.model;
 
 public class SearchDay {
-    private String ngay;
-    private int doanhthu;
+    public String ngay;
+    public int doanhthu;
 
     public SearchDay(String ngay, int doanhthu) {
         this.ngay = ngay;

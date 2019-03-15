@@ -36,13 +36,13 @@
             android:layout_height="wrap_content"
             android:text="Từ Ngày"
             />
+
         <TextView
             android:id="@+id/txtngaybatdau"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
             android:layout_marginLeft="15dp"
-            android:padding="5dp"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            />
+            android:padding="5dp" />
         <ImageView
             android:id="@+id/btnChooseStarDay"
             android:layout_marginLeft="15dp"
@@ -64,13 +64,13 @@
             android:layout_height="wrap_content"
             android:text="Đến Ngày"
             />
+
         <TextView
-            android:layout_marginLeft="15dp"
-            android:padding="5dp"
             android:id="@+id/txtngayketthuc"
-            android:layout_width="100dp"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
-            />
+            android:layout_marginLeft="15dp"
+            android:padding="5dp" />
         <ImageView
             android:layout_marginLeft="15dp"
             android:layout_width="30dp"
@@ -91,18 +91,35 @@
             android:textColor="#000"
             android:layout_width="75dp"
             android:layout_height="wrap_content"
-            android:text="Đến Ngày"
+            android:text="Công ty"
             />
 
         <Spinner
             android:id="@+id/spinner1"
-            android:layout_width="150dp"
+            android:layout_width="190dp"
             android:layout_height="match_parent"
-            android:layout_marginLeft="15dp"
-            android:padding="5dp" />
+            android:layout_marginLeft="15dp" />
     </LinearLayout>
 
+    <TextView
+        android:id="@+id/txtText"
+        android:textColor="#000"
+        android:visibility="gone"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="75dp"
+        android:layout_height="10dp"
 
+        />
+    <TextView
+        android:id="@+id/txtCheck"
+        android:textColor="#FF0000"
+        android:text="Bạn chưa chọn công ty"
+        android:visibility="gone"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        />
     <Button
         android:layout_gravity="center_horizontal"
         android:layout_margin="10dp"

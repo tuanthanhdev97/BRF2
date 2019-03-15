@@ -36,19 +36,27 @@
             android:layout_height="wrap_content"
             android:text="Từ Tháng"
             />
+
         <TextView
             android:id="@+id/txtthangbatdau"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
             android:layout_marginLeft="15dp"
-            android:padding="5dp"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            />
+            android:padding="5dp" />
         <ImageView
             android:id="@+id/btnChooseStarMonth"
             android:layout_marginLeft="15dp"
             android:layout_width="30dp"
             android:background="@drawable/calendar"
             android:layout_height="30dp" />
+        <TextView
+            android:id="@+id/getstartmonth"
+            android:layout_marginLeft="15dp"
+            android:padding="5dp"
+            android:visibility="gone"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            />
     </LinearLayout>
     <LinearLayout
         android:layout_marginTop="10dp"
@@ -68,7 +76,7 @@
             android:layout_marginLeft="15dp"
             android:padding="5dp"
             android:id="@+id/txtthangketthuc"
-            android:layout_width="100dp"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             />
         <ImageView
@@ -77,6 +85,14 @@
             android:id="@+id/btnChooseEndMonth"
             android:background="@drawable/calendar"
             android:layout_height="30dp" />
+        <TextView
+            android:id="@+id/getendtmonth"
+            android:layout_marginLeft="15dp"
+            android:padding="5dp"
+            android:visibility="gone"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            />
     </LinearLayout>
     <LinearLayout
 
@@ -88,9 +104,9 @@
         <TextView
             android:padding="5dp"
             android:textColor="#000"
-            android:layout_width="75dp"
+            android:layout_width="80dp"
             android:layout_height="wrap_content"
-            android:text="Đến Ngày"
+            android:text="Công ty"
             />
 
         <Spinner
@@ -100,7 +116,26 @@
             android:layout_marginLeft="15dp"
             android:padding="5dp" />
     </LinearLayout>
+    <TextView
+        android:id="@+id/txtText"
+        android:textColor="#000"
+        android:visibility="gone"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="75dp"
+        android:layout_height="10dp"
 
+        />
+
+    <TextView
+        android:id="@+id/txtCheck"
+        android:textColor="#FF0000"
+        android:text="Bạn chưa chọn công ty"
+        android:visibility="gone"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        />
     <Button
         android:layout_gravity="center_horizontal"
         android:layout_margin="10dp"
